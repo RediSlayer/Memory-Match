@@ -32,7 +32,7 @@ public class Tablero {
     }
 
     //Creamos función para verificar parejas
-    public boolean VerificarParejas(int filaUno, int columnaDos, int filaDos, int columnaDos){
+    public boolean VerificarParejas(int filaUno, int columnaUno, int filaDos, int columnaDos){
         if(tableroConSimbolos[filaUno][columnaDos] == tableroConSimbolos[filaDos][columnaDos]){
             //Por si encuentra
             parejasEncontradas++;
