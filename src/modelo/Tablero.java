@@ -22,6 +22,7 @@ public class Tablero {
         cartas.add('☯');cartas.add('☯');
         Collections.shuffle(cartas);
 
+        parejasEncontradas = 0;
         int indiceArray = 0;
         for (int i = 0; i < tableroConSimbolos.length; i++) {
             for (int j = 0; j < tableroConSimbolos[i].length; j++) {
@@ -33,7 +34,7 @@ public class Tablero {
 
     //Creamos función para verificar parejas
     public boolean VerificarParejas(int filaUno, int columnaUno, int filaDos, int columnaDos){
-        if(tableroConSimbolos[filaUno][columnaDos] == tableroConSimbolos[filaDos][columnaDos]){
+        if(tableroConSimbolos[filaUno][columnaUno] == tableroConSimbolos[filaDos][columnaDos]){
             //Por si encuentra
             parejasEncontradas++;
             return true;
@@ -58,4 +59,7 @@ public class Tablero {
     public char getSimbolo(int fila, int columna) {
         return tableroConSimbolos[fila][columna];
     }
+
+    //Para poder conseguir el nombre de parejas
+    public int getParejasEncontradas(){ return this.parejasEncontradas;}
 }

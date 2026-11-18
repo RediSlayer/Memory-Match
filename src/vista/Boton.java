@@ -1,6 +1,7 @@
 package src.vista;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Boton extends JButton {
     private final int fila;
@@ -13,7 +14,7 @@ public class Boton extends JButton {
         this.columna = columna;
 
         // --- Configuración visual encapsulada ---
-        this.setFont(new Font("Arial", Font.BOLD, 28));
+        this.setFont(new Font("Segoe UI Symbol", Font.BOLD, 28));
         this.setFocusPainted(false);
         this.setBackground(Color.LIGHT_GRAY); // O lo que prefieras
     }
